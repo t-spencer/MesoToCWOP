@@ -6,7 +6,7 @@ __version__ = "1.2"
 # or AT for the Temperature) in the below code
 
 CWOPid = "FW####"
-File = 'Mesonet.dat'
+DataFile = 'Mesonet.dat'
 Lat = '####.##N'
 Lon = '#####.##W'
 StationHeight = 67 # in M
@@ -90,7 +90,7 @@ class MesoToCWOP:
 
 def Job():
 	'''Defines the job to be scheduled'''
-	Mesonet = MesoToCWOP(File)
+	Mesonet = MesoToCWOP(DataFile)
 	Mesonet.GetLastData()
 	Mesonet.FormatData()
 	Mesonet.SendData()
