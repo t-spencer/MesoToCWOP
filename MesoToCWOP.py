@@ -9,7 +9,7 @@ CWOPid = "FW####"
 File = 'Mesonet.dat'
 Lat = '####.##N'
 Lon = '#####.##W'
-StationHeight ### = #in M
+StationHeight = 67 # in M
 #----------------------------------------------------------------------------------
 
 # Imports necessary modules
