@@ -9,6 +9,7 @@ CWOPid = "FW####"
 File = 'Mesonet.dat'
 Lat = '####.##N'
 Lon = '#####.##W'
+StationHeight ### = #in M
 #----------------------------------------------------------------------------------
 
 # Imports necessary modules
@@ -27,7 +28,7 @@ def Cel_to_F(Temperature):
 	return ((9.0/5.0) * Temperature) + 32
 
 def AltimeterAdjust(Press):
-	Height = 67 # in m
+	Height = StationHeight
 	P1 = Press - 0.3
 	Frac1 = ((1013.25**0.19284) * 0.0065) / 288
 	Frac2 = Height / ((Press-0.3)**(0.190284))
