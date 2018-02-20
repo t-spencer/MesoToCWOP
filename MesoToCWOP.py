@@ -55,10 +55,10 @@ class MesoToCWOP:
 		WinD = "_" + "{:0>3d}".format(int(round(self.LastData['WD'].values[0]))) 
 		WinS = "/" + "{:0>3d}".format(int(round(mps_to_mph(self.LastData['WS'].values[0])))) 
 		Gust = "g..." #+ "{:0>3d}".format(int(round(mps_to_mph(self.LastData['WSgst'].values[0]))))
-		if self.LastData['AT'].values[0] < 0:
+		if Cel_to_F(self.LastData['AT'].values[0]) < 0:
 			Temp = "{:.0f}".format(round(Cel_to_F(self.LastData['AT'].values[0])))
 			RepTemp = "t-" + "{:0>2d}".format(int(Temp))
-		if self.LastData['AT'].values[0] > 0:
+		if Cel_to_F(self.LastData['AT'].values[0]) > 0:
 			Temp = "{:.0f}".format(round(Cel_to_F(self.LastData['AT'].values[0]))) 
 			RepTemp = "t" + "{:0>3d}".format(int(Temp))		
 		RainfallHour = 'r' +  "{:0>3d}".format(int(round(self.LastData['RN60'].values[0] * 100)))
