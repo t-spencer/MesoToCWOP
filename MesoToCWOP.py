@@ -1,5 +1,5 @@
-__author__ = "Trent Spencer, Texas A&M University"
-__version__ = "1.2"
+__author__ = "Trent Spencer, University of Kansas"
+__version__ = "1.3"
 
 
 # Change these to your values, you will also likely have to edit the variable names (such as RH for humidity
@@ -15,7 +15,6 @@ StationHeight = 67 # in M
 # Imports necessary modules
 import pandas as pd
 import subprocess as sp
-import numpy as np
 import socket
 import schedule
 import time
